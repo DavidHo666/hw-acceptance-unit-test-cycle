@@ -5,6 +5,8 @@
   <%= text_field :movie, :title, :class => 'form-control' %>
   <%= label :movie, :rating, 'Rating', :class => 'col-form-label'  %>
   <%= select :movie, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
+  <%= label :movie, :director, 'Director', :class => 'col-form-label' %>
+  <%= text_field :movie, :director, :class => 'form-control' %>
   <%= label :movie, :release_date, 'Released On', :class => 'col-form-label'  %>
   <%= date_select :movie, :release_date, {}, :class => 'form-control col-2 d-inline' %>
   <br/>

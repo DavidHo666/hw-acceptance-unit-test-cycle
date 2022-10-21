@@ -22,7 +22,13 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     when /^the edit page for "(.*)"/ then
-      edit_movie_path(Movie.find_by_title($1))
+      return edit_movie_path(Movie.find_by_title($1))
+
+    when /^the details page for "(.*)"/ then
+      return movie_path(Movie.find_by_title($1))
+
+    when /^the Similar Movies page for "(.*)"/ then
+      return similar_movies_path(Movie.find_by_title($1))
 
     else
       begin
